@@ -1,0 +1,221 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/ 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&display=swap');
+@import url('https://use.typekit.net/duk3ixk.css');
+
+.footereditor-info-card {
+    @extend .info-card;
+	background-color: black;
+	margin: 0px;
+    font-family: "proxima-nova", sans-serif;
+    border:1px solid #000000;
+    max-width: 1245;
+}
+
+.footereditor-info-card-content {
+    @extend .info-card-content;
+    color: $sc-color-secondary;
+    font-weight: bold;
+}
+
+.footer-content {
+	background-color: rgb(0, 0, 0);
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+
+}
+.footer-copyright-content
+{
+	background-color: rgb(0, 0, 0);
+	margin: 0px
+}
+#signupRow{
+	margin-right : 15%;
+	margin-left :15%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+    
+}
+#signupMessage
+{
+	text-align: right;
+    color: #b5b5b5;
+   
+}
+@media (max-width: 991px){
+
+   #signupMessage{
+    text-align: center;
+    padding-bottom: 30px;
+    }
+    #emailAdder {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; 
+        margin-top: 15px;
+    }
+   
+}
+#companyDetails{
+    text-align: justify;
+    padding-left:5%;
+
+}
+@media (max-width: 1245px){
+    #companyDetails{
+        text-align: justify;
+        padding-left:0;
+    
+    }
+}
+@media (max-width: 768px){
+    #secondFooter {
+        text-align: center;
+    }
+    #companyDetails {
+        text-align: center;
+    }
+}
+
+#emailAdder
+{
+	display: flex;
+	align-items: left; 
+	gap: 5px;
+}
+
+#emailAdder input {
+    background-color: black; /* Set background color to black */
+    color: white; /* Ensure the text color is visible on black background */
+    border: none; /* Remove the default border */
+    border-bottom: 2px solid #ffffff; /* Add a border at the bottom */
+    width: 100%; /* Make the input field full-width (optional) */
+}
+
+#emailAdder input::placeholder {
+    padding-left: 10px; /* Add padding to the placeholder text */
+    color: white; /* Ensure the placeholder text is visible on black background */
+    opacity: 0.7; /* Optional: adjust opacity for placeholder */
+}
+
+#emailAdder input:focus {
+    outline: none; /* Remove the default focus outline */
+    border-bottom: 2px solid #ffffff; /* Change the border color on focus (optional) */
+}
+
+
+#emailAdder button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+	border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease, padding-right 0.3s ease;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between text and icon */
+}
+
+#emailAdder button:hover {
+    background-color: #ffffff;
+    font-size: 18px;
+    padding-right: 24px; /* Extra padding to make space for the icon */
+}
+
+.button-icon {
+    width: 16px; /* Adjust the size as needed */
+    height: 16px; /* Adjust the size as needed */
+    fill: rgb(0, 0, 0); /* Set the color of the icon */
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth icon appearance */
+    transform: translateX(-10px); /* Position it slightly offscreen initially */
+}
+
+#emailAdder button:hover .button-icon {
+    opacity: 1; /* Show icon on hover */
+    transform: translateX(0); /* Slide into view */
+}
+#secondFooter{
+    padding: 15px;
+}
+
+#secondFooter h2
+{
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 3px;
+    padding-top: 15px;
+}
+
+#secondFooter a {
+    color: #b5b5b5;
+    font-weight: 400;
+    font-size: 15px;
+    // margin-top: 25px;
+    // margin-bottom: 25px;
+    padding: 10px 0px; /* Add padding if it’s missing */
+    display: inline-block; /* Inline-block to ensure padding and margin apply */
+}
+#secondFooter a:hover {
+    color: #bc0000;
+    
+}
+
+#detailColumn{
+    text-align: left;
+    width: 20%;
+    float: left;
+    vertical-align: top;
+    padding: 15px;
+}
+
+#footerLogo{
+    width: 100%;
+    height: auto;
+    margin-left: 25px;
+}
+
+
+.global-views-back-to-top {
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+.icon {
+    display: inline-block; /* Make it an inline-block for better control */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icon:hover {
+    transform: rotate(360deg); /* Rotate 360 degrees */
+}
+
+.footereditor-info-card-content{
+    float:inline-end;
+    color: #b5b5b5;
+}
+
+#storeName,#storeAddress
+{
+padding-left:25px;
+letter-spacing: 1.5px;
+}
+#storeAddress {
+    max-width: 200px; /* Adjust as needed */
+    word-wrap: break-word;
+    white-space: normal;
+    margin-left:25px;
+}
+

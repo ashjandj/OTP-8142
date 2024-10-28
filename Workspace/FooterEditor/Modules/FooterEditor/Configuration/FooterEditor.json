@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": { 
+        "FooterEditor.config": {
+            "group": "extensions",
+            "subtab": "FooterEditor_subtab",
+            "type": "string",
+            "title": "FooterEditor_Title",
+            "description": "Config description example",
+            "default": "Default config example"
+        }
+    }
+}
